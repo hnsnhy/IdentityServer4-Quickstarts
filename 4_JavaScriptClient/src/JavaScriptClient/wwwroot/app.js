@@ -43,8 +43,8 @@ function login() {
 
 function api() {
     mgr.getUser().then(function (user) {
-        var url = "https://localhost:44341/api/services/app/Edition/GetEditions";
-
+        //var url = "https://localhost:44341/api/services/app/Edition/GetEditions";
+        var url = "https://localhost:44351/ContentService/api/services/app/Session/GetCurrentLoginInformations";
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url);
         xhr.onload = function () {
