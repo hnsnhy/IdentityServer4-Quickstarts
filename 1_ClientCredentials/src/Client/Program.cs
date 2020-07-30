@@ -46,7 +46,7 @@ namespace Client
             var apiClient = new HttpClient();
             apiClient.SetBearerToken(tokenResponse.AccessToken);
 
-            var response = await apiClient.GetAsync("http://localhost:5001/identity");
+            var response = await apiClient.GetAsync("https://localhost:44341/api/services/app/Caching/GetAllCaches");
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine(response.StatusCode);
